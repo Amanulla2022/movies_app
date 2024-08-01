@@ -1,21 +1,14 @@
 import React from "react";
+import MovieCard from "./MovieCard";
 
-const MovieList = () => {
-  const fetchMovies = async () => {
-    try {
-      const response = await fetch(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=movie`
-      );
-      console.log(process.env.REACT_APP_API_KEY);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  fetchMovies();
-  return <div></div>;
+const MovieList = ({ movies }) => {
+  return (
+    <div className="m-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      {movies.map((movie) => (
+        <MovieCard key={movie.imdbID} movie={movie} />
+      ))}
+    </div>
+  );
 };
 
 export default MovieList;
