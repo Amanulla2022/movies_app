@@ -2,6 +2,8 @@
 
 This is a React-based movie search application that allows users to search for movies, view details, and navigate through paginated results. The application fetches movie data from the OMDB API and displays it in a user-friendly interface.
 
+# [Hosted_Link](https://movies-app-kappa-neon.vercel.app/)
+
 ## Features
 
     - Search Movies: Users can search for movies by title.
@@ -38,7 +40,7 @@ npm install or yarn install
 
 ### Setup API Key
 
-#### Obtain an API key from OMDB API
+#### Obtain an API key from [OMDB Api](https://www.omdbapi.com/)
 
 Create a .env file in the root of your project and add your API key
 REACT_APP_API_KEY=your_api_key_here
