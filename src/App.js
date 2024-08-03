@@ -26,7 +26,7 @@ function App() {
     setError("");
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${input}&page=${page}&apikey=${process.env.REACT_APP_API_KEY}`
+        `https://www.omdbapi.com/?s=${input}&page=${page}&apikey=${process.env.REACT_APP_API_KEY}`
       );
       const data = await response.json();
       if (data.Response === "True") {
@@ -49,7 +49,7 @@ function App() {
     setError("");
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.REACT_APP_API_KEY}`
+        `https://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.REACT_APP_API_KEY}`
       );
       const data = await response.json();
       if (data.Response === "True") {
