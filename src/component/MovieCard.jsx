@@ -1,8 +1,11 @@
 import React from "react";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, handleCardClick }) => {
   return (
-    <div className="relative p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <div
+      className="relative p-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+      onClick={() => handleCardClick(movie)}
+    >
       <img src={movie.Poster} alt={movie.Title} className="w-full rounded-lg" />
       <div className="absolute top-0 left-0 bg-gray-800 text-white px-2 py-1 rounded-lg text-xs">
         {movie.imdbID}

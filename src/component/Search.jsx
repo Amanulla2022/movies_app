@@ -6,6 +6,10 @@ const Search = ({ input, setInput, fetchMovies }) => {
     setInput(e.target.value);
   };
 
+  const handleSearch = () => {
+    fetchMovies(1);
+  };
+
   return (
     <div className="main-div">
       <input
@@ -17,7 +21,7 @@ const Search = ({ input, setInput, fetchMovies }) => {
       />
       <button
         className="bg-blue-400 hover:bg-blue-700 text-white text-xl p-2 rounded-2xl lg:w-1/12 w-1/6"
-        onClick={fetchMovies}
+        onClick={handleSearch}
       >
         Search
       </button>

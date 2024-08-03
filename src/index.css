@@ -5,3 +5,11 @@
 .main-div {
   @apply flex justify-around items-center;
 }
+
+.movie-p {
+  @apply text-gray-700 mb-2;
+}
+
+.movie-span {
+  @apply underline font-bold;
+}
